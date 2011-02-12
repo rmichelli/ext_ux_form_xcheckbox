@@ -1,0 +1,7 @@
+Extjs extension - Ext.ux.form.XCheckbox
+
+Original code from: http://extjs.com/forum/showthread.php?p=211041#post211041
+
+Repo includes the following modifications:
+
+  Checkbox hidden field is enable/disabled with checkbox for proper form submit behavior

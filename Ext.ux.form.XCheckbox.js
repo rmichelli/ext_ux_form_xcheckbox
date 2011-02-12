@@ -11,7 +11,7 @@
 * the Open Source LGPL 3.0 license.  Commercial use is permitted to the extent
 * that the code/component(s) do NOT become part of another Open Source or Commercially
 * licensed development library or toolkit without explicit permission.
-* 
+*
 * License details: http://www.gnu.org/licenses/lgpl.html
 */
 
@@ -77,9 +77,31 @@ Ext.ux.form.XCheckbox = Ext.extend(Ext.form.Checkbox, {
         return (v === true || v === 'true' || v == 1 || v === this.submitOnValue || String(v).toLowerCase() === 'on');
     } // eo function convertValue
 
+    /**
+    * Disables hiddenField when checkbox is disabled
+    * @private
+    */
+    , onDisable: function () {
+	    Ext.ux.form.XCheckbox.superclass.onDisable.apply(this, arguments);
+        if (this.hiddenField) {
+            this.hiddenField.dom.disabled = true;
+        }
+    } // eo function onDisable
+
+    /**
+    * Enables hiddenField when checkbox is enabled
+    * @private
+    */
+    , onEnable: function () {
+        Ext.ux.form.XCheckbox.superclass.onEnable.apply(this, arguments);
+        if (this.hiddenField) {
+            this.hiddenField.dom.disabled = false;
+        }
+    } // eo function onEnable
+
 }); // eo extend
 
 // register xtype
 Ext.reg('xcheckbox', Ext.ux.form.XCheckbox);
 
-// eof  
+// eof
