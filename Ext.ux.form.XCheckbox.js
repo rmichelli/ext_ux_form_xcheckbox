@@ -3,7 +3,7 @@
 * Ext.ux.form.XCheckbox - checkbox with configurable submit values
 *
 * @author  Ing. Jozef Sakalos
-* @version $Id: Ext.ux.form.XCheckbox.js 441 2009-01-12 11:10:10Z jozo $
+* @version $Id: Ext.ux.form.XCheckbox.js 441(modified) 2009-01-12 11:10:10Z jozo $
 * @date    10. February 2008
 *
 *
@@ -82,7 +82,7 @@ Ext.ux.form.XCheckbox = Ext.extend(Ext.form.Checkbox, {
     * @private
     */
     , onDisable: function () {
-	    Ext.ux.form.XCheckbox.superclass.onDisable.apply(this, arguments);
+        Ext.ux.form.XCheckbox.superclass.onDisable.apply(this, arguments);
         if (this.hiddenField) {
             this.hiddenField.dom.disabled = true;
         }
