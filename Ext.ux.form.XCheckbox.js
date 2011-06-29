@@ -38,7 +38,7 @@ Ext.ux.form.XCheckbox = Ext.extend(Ext.form.Checkbox, {
 
         // support tooltip
         if (this.tooltip) {
-            this.imageEl.set({ qtip: this.tooltip });
+            this.imageEl.set({ 'ext:qtip': this.tooltip });
         }
 
         // update value of hidden field
